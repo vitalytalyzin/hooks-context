@@ -1,0 +1,8 @@
+.wrapper {
+  display: flex;
+}
+
+.usersWrapper {
+  width: 50%;
+  margin-right: 36px;
+}

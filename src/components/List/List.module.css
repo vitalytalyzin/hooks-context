@@ -1,0 +1,16 @@
+.listItem {
+  padding: 8px 16px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color .3s ease-out;
+}
+
+.listItem:hover {
+  background-color: whitesmoke;
+}
+
+.listItem:not(:last-child) {
+  margin-bottom: 16px;
+}
+
