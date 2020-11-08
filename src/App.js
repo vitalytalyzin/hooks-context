@@ -5,14 +5,13 @@ import Details from './components/Details/Details';
 
 function App() {
   const [users, setUsers] = useState([]);
-  const [currentUserId, setCurrentUserId] = useState(0)
+  const [currentUserId, setCurrentUserId] = useState(null);
 
   useEffect(() => {
-    fetch(process.env.REACT_APP_USERS_URL)
+    fetch(`${process.env.REACT_APP_USERS_URL}/users.json`)
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, []);
-
 
   return (
     <div className={styles.wrapper}>
@@ -22,7 +21,11 @@ function App() {
           setActiveId={setCurrentUserId}
         />
       </div>
-      <Details {...users[currentUserId]} />
+      {currentUserId !== null && (
+        <div className={styles.detailsWrapper}>
+          <Details id={currentUserId} />
+        </div>
+      )}
     </div>
   );
 }

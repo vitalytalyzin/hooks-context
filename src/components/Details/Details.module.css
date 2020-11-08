@@ -1,14 +1,9 @@
 .wrapper {
-  flex: auto;
   padding: 16px;
-  border: 1px solid grey;
-  border-radius: 4px;
 }
 
 .userAvatar {
-  width: 150px;
-  height: 150px;
-  margin-bottom: 24px;
-  border-radius: 50%;
-  background-color: salmon;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
 }

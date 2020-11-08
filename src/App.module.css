@@ -6,3 +6,9 @@
   width: 50%;
   margin-right: 36px;
 }
+
+.detailsWrapper {
+  flex: auto;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
